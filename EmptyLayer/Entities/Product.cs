@@ -10,6 +10,12 @@ namespace EmptyLayer.Entities
     public class Product
     {
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Boş Geçilemez")]
+        [Display(Name = "İsim")]
+        [StringLength(50, ErrorMessage = "Maksimum karakter sayısını geçtiniz")]
+        public string Name { get; set; }
+
         [Required(ErrorMessage = "Boş Geçilemez")]
         [Display(Name = "Açıklama")]
         [StringLength(50, ErrorMessage = "Maksimum karakter sayısını geçtiniz")]

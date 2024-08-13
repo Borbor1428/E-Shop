@@ -35,15 +35,15 @@ namespace E_Shop.Controllers
             return View();
         }
 
-        public ActionResult Delete(int d)
+        public ActionResult Delete(int id)
         {
-            var delete = categoryRepository.GetById(d);
+            var delete = categoryRepository.GetById(id);
             categoryRepository.Delete(delete);
             return RedirectToAction("Index");
         }
-        public ActionResult Update(){
-
-            return View();
+        public ActionResult Update(int id){
+            var update = categoryRepository.GetById(id);
+            return View(update);
         }
         [ValidateAntiForgeryToken]
         [HttpPost]
@@ -51,7 +51,7 @@ namespace E_Shop.Controllers
         {
             if (ModelState.IsValid)
             {
-                var update = categoryRepository.GetById(p.Id);
+            var update = categoryRepository.GetById(p.Id);
             update.Name = p.Name;
             update.Description = p.Description;
             categoryRepository.Update(update);

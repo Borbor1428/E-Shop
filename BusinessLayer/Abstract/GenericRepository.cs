@@ -24,9 +24,9 @@ namespace BusinessLayer.Abstract
             db.SaveChanges();
         }
 
-        public T GetById(int id)
+        public T GetById(int Id)
         {
-            return data.Find(id);
+            return data.Find(Id);
         }
 
         public void Insert(T p)
