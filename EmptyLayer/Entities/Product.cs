@@ -49,10 +49,8 @@ namespace EmptyLayer.Entities
         public int Quantity { get; set; }
 
         [Required(ErrorMessage = "Boş Geçilemez")]
-        [Display(Name = "Karegori")]
+        [Display(Name = "Kategori")]
 
         public int CategoryId { get; set; }
-
-        public virtual Category Category { get; set;} 
     }
 }

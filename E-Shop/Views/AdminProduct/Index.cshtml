@@ -50,7 +50,7 @@
             </td>
 
             <td><img src="~/Content/Image/@item.Image" width="80" height="80"></td>
-            <td>@item.Category.Name</td>
+            <td>@item.Name</td>
             <td>@Html.ActionLink("Sil", "Delete", new { id = item.Id }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor musunuz?')" })</td>
             <td><a href="/AdminProduct/Update/@item.Id" class="btn btn-warning">Güncelle</a></td>
         </tr>

@@ -58,7 +58,7 @@
                 <br />
                 <div class="form-group ">
                     <label>Kategori</label>
-                    @Html.DropDownListFor(x => x.Category.Id, (List<SelectListItem>)ViewBag.ktgr, new { @class = "form-control" })
+                    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.ktgr, new { @class = "form-control" })
                     @Html.ValidationMessageFor(x => x.Popular, "", new { @style = "color:red" })
                 </div>
                 <br />
