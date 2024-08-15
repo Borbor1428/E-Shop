@@ -86,11 +86,11 @@
                                 }
                                 <li><a href="/Home/Index"> Anasayfa</a></li>
 
-                                @if (User.Identity.IsAuthenticated)
+                                @*@if (User.Identity.IsAuthenticated)
                                 {
                                     <li><a href="/Cart/Index"><img src="~/Content/Image/sepet.png" width="30" height="30" /><label style="color:red">@{Html.RenderAction("TotalCount", "Cart");}</label></a></li>
                                     <li><a href="/Sales/Index"><i class="fa fa-dollar"></i> Satışlarım</a></li>
-                                }
+                                }*@
 
            
 

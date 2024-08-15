@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EmptyLayer.Entities;
+using EntityLayer.Entities;
 
 namespace DataAccessLayer.Context
 {
@@ -20,6 +21,8 @@ namespace DataAccessLayer.Context
         public DbSet<Sales> Sales { get; set; }
 
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Comment> Comments { get; set; }
 
 
     }

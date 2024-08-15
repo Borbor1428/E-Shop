@@ -15,9 +15,9 @@ namespace EShop.Controllers
         // GET: Home
         ProductRepository productRepository = new ProductRepository();
         DataContext db = new DataContext();
-        public ActionResult Index(int sayfa = 1)
+        public ActionResult Index(int page = 1)
         {
-            return View(productRepository.List().ToPagedList(sayfa,3));
+            return View(productRepository.List().ToPagedList(page,3));
         }
 
 

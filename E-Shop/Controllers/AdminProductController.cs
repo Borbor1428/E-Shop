@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using BusinessLayer.Concrate;
 using DataAccessLayer.Context;
 using EmptyLayer.Entities;
+using PagedList.Mvc;
+using PagedList;
 
 namespace E_Shop.Controllers
 {
@@ -15,9 +17,9 @@ namespace E_Shop.Controllers
         // GET: AdminProduct
         ProductRepository productRepository = new ProductRepository();
         DataContext db = new DataContext();
-        public ActionResult Index()
+        public ActionResult Index(int page=1)
         {
-            return View(productRepository.List());
+            return View(productRepository.List().ToPagedList(page, 3));
         }
         public ActionResult Create()
         {

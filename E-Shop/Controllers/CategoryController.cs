@@ -20,5 +20,10 @@ namespace E_Shop.Controllers
             ViewBag.list = category;
             return PartialView(category);
         }
+        public ActionResult Details(int id)
+        {
+            var cat = categoryRepository.CategoryDetails(id);
+            return View(cat);
+        }
     }
 }
