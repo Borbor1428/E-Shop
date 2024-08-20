@@ -46,8 +46,6 @@ namespace EmptyLayer.Entities
         [DataType(DataType.Password)]
         [Compare("Password",ErrorMessage = "Hata!Girilen şifre ile uyuşmamaktadır")]
 
-        public string RePassword { get; set; }
-
         public string Role { get; set; }
 
 

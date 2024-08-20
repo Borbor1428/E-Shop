@@ -52,5 +52,8 @@ namespace EmptyLayer.Entities
         [Display(Name = "Kategori")]
 
         public int CategoryId { get; set; }
+
+        public virtual List<Card> Cards { get; set; }
+        public virtual List<Sales> Sales { get; set; }
     }
 }

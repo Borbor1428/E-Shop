@@ -22,8 +22,16 @@ namespace E_Shop.Controllers
         }
         public ActionResult ProductDetails(int id)
         {
-            var details = productRepository.GetById(id);
-            return View(details);
+            if (User.Identity.IsAuthenticated)
+            {
+                if (Session["userid"] != null)
+                {
+                    var details = productRepository.GetById(id);
+                    return View(details);
+                }
+                else { return RedirectToAction("Login", "Account"); }
+            }
+            return RedirectToAction("Login", "Account");
         }
         [HttpPost]
         public ActionResult Comment(Comment data)
