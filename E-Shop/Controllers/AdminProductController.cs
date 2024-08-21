@@ -82,7 +82,6 @@ namespace E_Shop.Controllers
                     product.Name = data.Name;
                     product.Popular = data.Popular;
                     product.Price = data.Price;
-                    product.Stock = data.Stock;
                     product.IsApproved = data.IsApproved;
                     product.CategoryId = data.CategoryId;
 
@@ -96,7 +95,6 @@ namespace E_Shop.Controllers
                     product.Name = data.Name;
                     product.Popular = data.Popular;
                     product.Price = data.Price;
-                    product.Stock = data.Stock;
                     product.IsApproved = data.IsApproved;
                     product.CategoryId = data.CategoryId;
 

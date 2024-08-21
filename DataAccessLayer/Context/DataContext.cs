@@ -24,6 +24,10 @@ namespace DataAccessLayer.Context
 
         public DbSet<Comment> Comments { get; set; }
 
+        public DbSet<Stock> Stocks { get; set; }
+
+        public DbSet<User_Address> User_Addresses { get; set; }
+
 
     }
 }
