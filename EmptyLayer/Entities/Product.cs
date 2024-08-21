@@ -26,10 +26,6 @@ namespace EmptyLayer.Entities
         public decimal Price { get; set; }
 
         [Required(ErrorMessage = "Boş Geçilemez")]
-        [Display(Name = "Stok")]
-        public int Stock { get; set; }
-
-        [Required(ErrorMessage = "Boş Geçilemez")]
         [Display(Name = "Popüler")]
 
         public bool Popular { get; set; }
@@ -45,12 +41,6 @@ namespace EmptyLayer.Entities
 
         [Required(ErrorMessage = "Boş Geçilemez")]
         [Display(Name = "Adet")]
-
-        public int Quantity { get; set; }
-
-        [Required(ErrorMessage = "Boş Geçilemez")]
-        [Display(Name = "Kategori")]
-
         public int CategoryId { get; set; }
 
         public virtual List<Card> Cards { get; set; }

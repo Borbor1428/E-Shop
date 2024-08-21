@@ -59,7 +59,7 @@ namespace E_Shop.Controllers
                         if (Card != null)
                         {
                             Card.Quantity++;
-                            Card.price = u.Price * Card.Quantity;
+                            Card.Price = u.Price * Card.Quantity;
                             db.SaveChanges();
                             return RedirectToAction("Index", "Cart");
                         }
@@ -68,7 +68,7 @@ namespace E_Shop.Controllers
                             UserId = model.UserId,
                             ProductId = u.Id,
                             Quantity = 1,
-                            price = u.Price,
+                            Price = u.Price,
                             Date = DateTime.Now
 
 
@@ -106,7 +106,7 @@ namespace E_Shop.Controllers
         {
             var model = db.Cards.Find(id);
             model.Quantity++;
-            model.price = model.price * model.Quantity;
+            model.Price = model.Price * model.Quantity;
             db.SaveChanges();
             return RedirectToAction("Index", "Cart");
         }
@@ -119,7 +119,7 @@ namespace E_Shop.Controllers
                 db.SaveChanges();
             }
             model.Quantity--;
-            model.price = model.price * model.Quantity;
+            model.Price = model.Price * model.Quantity;
             db.SaveChanges();
             return RedirectToAction("Index", "Cart");
         }
@@ -127,7 +127,7 @@ namespace E_Shop.Controllers
         {
             var model = db.Cards.Find(id);
             model.Quantity = quantity;
-            model.price = model.price * model.Quantity;
+            model.Price = model.Price * model.Quantity;
             db.SaveChanges();
 
         }
