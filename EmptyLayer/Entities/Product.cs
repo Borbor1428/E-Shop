@@ -42,8 +42,10 @@ namespace EmptyLayer.Entities
         [Required(ErrorMessage = "Boş Geçilemez")]
         [Display(Name = "Adet")]
         public int CategoryId { get; set; }
-
+        public int SupplierId { get; set; }
+        public virtual List<Supplier> Suppliers { get; set; }
         public virtual List<Card> Cards { get; set; }
         public virtual List<Sales> Sales { get; set; }
+        
     }
 }

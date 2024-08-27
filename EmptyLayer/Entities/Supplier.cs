@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EmptyLayer.Entities
 {
-    internal class Supplier
+    public class Supplier
     {
         public int Id { get; set; }
 
@@ -41,10 +41,9 @@ namespace EmptyLayer.Entities
         public string TaxId { get; set; }
 
         public int CityId { get; set; }
-        public virtual City City { get; set; }
-
+       
         public int CountryId { get; set; }
-        public virtual Country Country { get; set; }
+        
 
         public virtual ICollection<City> Cities { get; set; }
         public virtual ICollection<Supplier> Suppliers { get; set; }

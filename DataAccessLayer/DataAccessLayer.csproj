@@ -74,6 +74,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\DataContext.cs" />
+    <Compile Include="Migrations\202408270823090_FixProductStockRelation.cs" />
+    <Compile Include="Migrations\202408270823090_FixProductStockRelation.Designer.cs">
+      <DependentUpon>202408270823090_FixProductStockRelation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,6 +90,11 @@
       <Project>{cff9c0f1-1e9c-431d-881f-f56643e66c9c}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202408270823090_FixProductStockRelation.resx">
+      <DependentUpon>202408270823090_FixProductStockRelation.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

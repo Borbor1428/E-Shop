@@ -9,6 +9,7 @@ using DataAccessLayer.Context;
 using EmptyLayer.Entities;
 using PagedList.Mvc;
 using PagedList;
+using Newtonsoft.Json.Linq;
 
 namespace E_Shop.Controllers
 {
@@ -19,22 +20,23 @@ namespace E_Shop.Controllers
         DataContext db = new DataContext();
         public ActionResult Index(int page=1)
         {
+
             return View(productRepository.List().ToPagedList(page, 3));
         }
         public ActionResult Create()
         {
-            List<SelectListItem> deger1 = (from i in db.Categories.ToList()
+            List<SelectListItem> value1 = (from i in db.Categories.ToList()
                                            select new SelectListItem
                                            {
                                                Text = i.Name,
                                                Value = i.Id.ToString()
                                            }).ToList();
-            ViewBag.ktgr = deger1;
+            ViewBag.ktgr = value1;
             return View();
         }
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult Create(Product data, HttpPostedFileBase File)
+        public ActionResult Create(Product data, HttpPostedFileBase File, int StockQuantity)
         {
             if (!ModelState.IsValid)
             {
@@ -45,6 +47,14 @@ namespace E_Shop.Controllers
                 productRepository.Insert(data);
                 return RedirectToAction("Index");
             }
+            Stock stock = new Stock
+            {
+                ProductId = data.Id, // Yeni eklenen ürünün Id'si
+                Quantity = StockQuantity // Formdan alınan stok miktarı
+            };
+            db.Stocks.Add(stock);
+            db.SaveChanges();
+
             return View(data);
         }
         public ActionResult Delete(int id)
@@ -56,13 +66,13 @@ namespace E_Shop.Controllers
         }
         public ActionResult Update(int id)
         {
-            List<SelectListItem> deger1 = (from i in db.Categories.ToList()
+            List<SelectListItem> value1 = (from i in db.Categories.ToList()
                                            select new SelectListItem
                                            {
                                                Text = i.Name,
                                                Value = i.Id.ToString()
                                            }).ToList();
-            ViewBag.ktgr = deger1;
+            ViewBag.ktgr = value1;
             var product = productRepository.GetById(id);
             return View(product);
 
@@ -71,7 +81,7 @@ namespace E_Shop.Controllers
 
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult Update(Product data, HttpPostedFileBase File)
+        public ActionResult Update(Product data, HttpPostedFileBase File, int StockQuantity)
         {
             var product = productRepository.GetById(data.Id);
             if (!ModelState.IsValid)
@@ -84,6 +94,7 @@ namespace E_Shop.Controllers
                     product.Price = data.Price;
                     product.IsApproved = data.IsApproved;
                     product.CategoryId = data.CategoryId;
+                    
 
                     productRepository.Update(product);
                     return RedirectToAction("Index");
@@ -97,7 +108,7 @@ namespace E_Shop.Controllers
                     product.Price = data.Price;
                     product.IsApproved = data.IsApproved;
                     product.CategoryId = data.CategoryId;
-
+                    
                     productRepository.Update(product);
                     return RedirectToAction("Index");
                 }

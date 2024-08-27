@@ -22,12 +22,16 @@ namespace DataAccessLayer.Context
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<UserAddress> UserAddresses { get; set; }
+
         public DbSet<Comment> Comments { get; set; }
 
         public DbSet<Stock> Stocks { get; set; }
 
-        public DbSet<User_Address> User_Addresses { get; set; }
+        public DbSet<City> Cities { get; set; }
 
+        public DbSet<Country> Countries { get; set; }
 
     }
+
 }

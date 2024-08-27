@@ -75,13 +75,15 @@
   <ItemGroup>
     <Compile Include="Entities\Card.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\City.cs" />
     <Compile Include="Entities\Comment.cs" />
+    <Compile Include="Entities\Country.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Sales.cs" />
     <Compile Include="Entities\Stock.cs" />
     <Compile Include="Entities\Supplier.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Entities\User_Address.cs" />
+    <Compile Include="Entities\UserAddress.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

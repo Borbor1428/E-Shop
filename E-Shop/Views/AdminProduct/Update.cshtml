@@ -25,7 +25,7 @@
 
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(x => x.Image, "Resim", htmlAttributes: new {@class ="control-label col-md-2"})
+                    @Html.LabelFor(x => x.Image, "Resim", htmlAttributes: new { @class = "control-label col-md-2" })
                     <input type="file" class="form-control" name="File" />
                 </div>
                 <div class="form-group">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label>Stok</label>
-                    <input type="text" class="form-control" name="Stock" value="@Model.Stock" />
+                    <input type="text" class="form-control" name="Stock" value="@Model.Stock.Quantity" />
 
                 </div>
 
@@ -68,7 +68,6 @@
             </div>
         </div>
     </div>
-
 </form>
 
 
