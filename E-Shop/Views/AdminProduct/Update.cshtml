@@ -34,14 +34,6 @@
 
                 </div>
                 <div class="form-group">
-                    <label>Stok</label>
-                    <input type="text" class="form-control" name="Stock" value="@Model.Stock.Quantity" />
-
-                </div>
-
-
-
-                <div class="form-group">
                     @Html.LabelFor(x => x.Popular, "Popüler", htmlAttributes: new { @class = "control-label col-md-2" })
 
                     @Html.EditorFor(x => x.Popular)

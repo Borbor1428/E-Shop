@@ -78,6 +78,10 @@
     <Compile Include="Migrations\202408270823090_FixProductStockRelation.Designer.cs">
       <DependentUpon>202408270823090_FixProductStockRelation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202409020535130_InitialCreate.cs" />
+    <Compile Include="Migrations\202409020535130_InitialCreate.Designer.cs">
+      <DependentUpon>202409020535130_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -94,6 +98,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202408270823090_FixProductStockRelation.resx">
       <DependentUpon>202408270823090_FixProductStockRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202409020535130_InitialCreate.resx">
+      <DependentUpon>202409020535130_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

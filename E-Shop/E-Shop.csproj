@@ -731,6 +731,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminProductController.cs" />
     <Compile Include="Controllers\AdminSalesController.cs" />
+    <Compile Include="Controllers\AdminStockController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -846,6 +847,10 @@
     <Content Include="Views\Sales\BuyAll.cshtml" />
     <Content Include="Views\Sales\Process.cshtml" />
     <Content Include="Views\AdminSales\Index.cshtml" />
+    <Content Include="Views\AdminStock\Index.cshtml" />
+    <Content Include="Views\AdminStock\Create.cshtml" />
+    <Content Include="Views\Admin\CommentList.cshtml" />
+    <Content Include="Views\AdminStock\Update.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

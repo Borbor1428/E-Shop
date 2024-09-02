@@ -36,7 +36,7 @@ namespace E_Shop.Controllers
         }
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult Create(Product data, HttpPostedFileBase File, int StockQuantity)
+        public ActionResult Create(Product data, HttpPostedFileBase File)
         {
             if (!ModelState.IsValid)
             {
@@ -47,13 +47,7 @@ namespace E_Shop.Controllers
                 productRepository.Insert(data);
                 return RedirectToAction("Index");
             }
-            Stock stock = new Stock
-            {
-                ProductId = data.Id, // Yeni eklenen ürünün Id'si
-                Quantity = StockQuantity // Formdan alınan stok miktarı
-            };
-            db.Stocks.Add(stock);
-            db.SaveChanges();
+          
 
             return View(data);
         }
@@ -81,7 +75,7 @@ namespace E_Shop.Controllers
 
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult Update(Product data, HttpPostedFileBase File, int StockQuantity)
+        public ActionResult Update(Product data, HttpPostedFileBase File)
         {
             var product = productRepository.GetById(data.Id);
             if (!ModelState.IsValid)

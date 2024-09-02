@@ -39,13 +39,6 @@ namespace EmptyLayer.Entities
         [StringLength(10, ErrorMessage = "Maksimum 10 karakter olmalıdır")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-
-        [Required(ErrorMessage = "Boş Geçilemez")]
-        [Display(Name = "Şifre Tekrarı")]
-        [StringLength(10, ErrorMessage = "Maksimum 10 karakter olmalıdır")]
-        [DataType(DataType.Password)]
-        [Compare("Password",ErrorMessage = "Hata!Girilen şifre ile uyuşmamaktadır")]
-
         public string Role { get; set; }
 
 

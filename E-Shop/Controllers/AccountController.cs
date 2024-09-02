@@ -57,40 +57,5 @@ namespace E_Shop.Controllers
 
             return RedirectToAction("Index", "Home");
         }
-        //public ActionResult SifreReset()
-        //{
-        //    return View();
-        //}
-        //[HttpPost]
-        //public ActionResult SifreReset(string Email)
-        //{
-        //    var mail = db.Users.Where(x => x.Mail == Email).SingleOrDefault();
-
-        //    if (mail != null)
-        //    {
-        //        Random rnd = new Random();
-        //        int yenisifre = rnd.Next();
-        //        User sifre = new User();
-        //        mail.Password = (Convert.ToString(yenisifre));
-        //        db.SaveChanges();
-        //        WebMail.SmtpServer = "smtp.gmail.com";
-        //        WebMail.EnableSsl = true;
-        //        WebMail.UserName = "kurumsalweb7@gmail.com";
-        //        WebMail.Password = "kurumsal12345";
-        //        WebMail.SmtpPort = 587;
-        //        WebMail.Send(Email, "Giriş Şifreniz", "Şifreniz:" + yenisifre);
-        //        ViewBag.uyari = "Şifre gönderildi";
-        //    }
-        //    else
-        //    {
-        //        ViewBag.uyari = "Şifre gönderilmedi";
-        ////    }
-
-
-
-
-
-        //    return View();
-        //}
     }
 }

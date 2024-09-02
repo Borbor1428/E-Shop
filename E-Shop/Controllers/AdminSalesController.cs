@@ -17,5 +17,6 @@ namespace EShop.Controllers
         {
             return View(db.Sales.ToList().ToPagedList(page, 5));
         }
+
     }
 }

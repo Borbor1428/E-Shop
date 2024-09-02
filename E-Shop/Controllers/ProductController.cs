@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using BusinessLayer.Concrate;
 using DataAccessLayer.Context;
-using EntityLayer.Entities;
+using EmptyLayer.Entities;
 
 namespace E_Shop.Controllers
 {

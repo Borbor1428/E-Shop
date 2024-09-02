@@ -69,12 +69,8 @@
                                         <i class="fa fa-shopping-cart"></i>
                                         Sepete Ekle
                                     </a>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1" id="@Model.Id">
-                                        İndirim Uygula
-                                    </button>
                                 </span>
                                 <p><b>Kategori:</b> @Model.CategoryId</p>
-                                <p><b>Stok:</b> @Model.Stock.Quantity</p>
                                 <p><b>Popüler:</b> @Model.Popular</p>
                                 <p><b>Onay:</b> @Model.IsApproved</p>
                                 <p><b>Açıklama:</b> @Model.Description</p>
@@ -85,30 +81,6 @@
                             Yorum Yap
                         </button>
 
-                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <form method="post" action="/Product/CouponDiscount">
-                                        @Html.AntiForgeryToken()
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Kupon Kodunu Yazınız.</h5>
-
-                                        </div>
-                                        <div class="modal-body">
-                                            <textarea class="form-control" name="Contents" placeholder="yorum yazınız..."></textarea>
-                                            <input type="hidden" name="@Model.Id" />
-                                            <input type="hidden" name="@Session["UserId"]" />
-                                            <input type="hidden" name="@DateTime.Now" />
-                                            <input type="number" class="form-control" name="ProductCouponCode" />
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
-                                            <button type="submit" class="btn btn-primary">Gönder</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -119,7 +91,7 @@
 
                                         </div>
                                         <div class="modal-body">
-                                            <textarea class="form-control" name="Icerik" placeholder="Yorum Yazınız..."></textarea>
+                                            <textarea class="form-control" name="Contents" placeholder="Yorum Yazınız..."></textarea>
                                             <input type="hidden" name="ProductId" value="@Model.Id" />
                                             <input type="hidden" name="UserId" value="@Session["userid"]" />
                                             <input type="hidden" name="Date" value="@DateTime.Now" />
