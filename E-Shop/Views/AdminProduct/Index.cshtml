@@ -1,6 +1,7 @@
 ﻿@using PagedList;
 @using PagedList.Mvc;
 @model IPagedList<EmptyLayer.Entities.Product>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -14,7 +15,7 @@
         <th>Ad</th>
         <th>Açıklama</th>
         <th>Fiyat</th>
-        <th>Stok</th>
+        
 
         <th>Popüler</th>
         <th>Onay</th>
@@ -30,7 +31,7 @@
             <td>@item.Name</td>
             <td>@item.Description</td>
             <td>@item.Price</td>
-            <td>@item.Stock</td>
+           
 
             <td>
                 @if (item.Popular == true)

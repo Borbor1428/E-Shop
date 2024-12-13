@@ -45,8 +45,8 @@ namespace E_Shop.Controllers
                         ProductId = model.ProductId,
                         Quantity = model.Quantity,
                         Image = model.Image,
-                        price = model.price,
-                        Date = model.Date,
+                        Price = model.Price,
+                        Sale_Date = model.Date,
 
                     };
                     db.Cards.Remove(model);
@@ -104,9 +104,9 @@ namespace E_Shop.Controllers
                     UserId = model[row].UserId,
                     ProductId = model[row].ProductId,
                     Quantity = model[row].Quantity,
-                    price = model[row].price,
+                    Price = model[row].Price,
                     Image = model[row].Product.Image,
-                    Date = DateTime.Now
+                    Sale_Date = DateTime.Now
                 };
                 db.Sales.Add(sales);
                 db.SaveChanges();

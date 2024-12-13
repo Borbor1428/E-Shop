@@ -16,9 +16,8 @@ namespace E_Shop.Controllers
         DataContext db = new DataContext();
         public PartialViewResult CategoryList()
         {
-            var category = categoryRepository.List();
-            ViewBag.list = category;
-            return PartialView(category);
+           
+            return PartialView(categoryRepository.List());
         }
         public ActionResult Details(int id)
         {

@@ -22,7 +22,7 @@ namespace EmptyLayer.Entities
 
         [Display(Name = "Fiyat")]
 
-        public decimal price { get; set; }
+        public decimal Price { get; set; }
 
         [Display(Name = "Tarih")]
 

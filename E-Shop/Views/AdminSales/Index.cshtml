@@ -27,9 +27,9 @@
                 <td>@item.Id</td>
                 <td>@item.Product.Name</td>
                 <td>@item.Quantity</td>
-                <td>@item.price</td>
+                <td>@item.Price</td>
                 <td><img src="~/Content/Image/@item.Product.Image" width="90" height="90" /></td>
-                <td>@Convert.ToDateTime(item.Date).ToString("dd/MM/yyyy")</td>
+                <td>@Convert.ToDateTime(item.Sale_Date).ToString("dd/MM/yyyy")</td>
             </tr>
         }
 

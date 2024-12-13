@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EmptyLayer.Entities;
 
-namespace EntityLayer.Entities
+namespace EmptyLayer.Entities
 {
     public class Comment
     {
